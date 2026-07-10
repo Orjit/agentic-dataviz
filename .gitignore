@@ -1,0 +1,26 @@
+# Block virtual environments anywhere in the project
+.venv/
+backend/.venv/
+vnev/
+ENV/
+
+# Block Node modules and build files
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+
+# Python caching and logs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.log
+
+# Environment files containing secret keys
+.env
+.env.local
+
+# Temp data files
+temp_*.csv
