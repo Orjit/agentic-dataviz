@@ -13,7 +13,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser, StrOutputParser
 
 # Set your API key here (in production, use a .env file)
-os.environ["GOOGLE_API_KEY"] = "YOUR_API_KEY_HERE"
+os.environ["GOOGLE_API_KEY"] = "AQ.Ab8RN6KL32XpGm3OpS7Pjv-oPR_jVSdxgLthWTFGyM30qRP"
 
 # Initialize the Gemini model
 llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", temperature=0)
