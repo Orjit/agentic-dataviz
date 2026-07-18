@@ -357,7 +357,7 @@ app = FastAPI(title="Agentic Data Viz API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000",
-                   "https://agentic-frontend.onrender.com"], # This tells your backend to trust your Next.js frontend
+                   "https://agentic-frontend-o9tv.onrender.com"], # This tells your backend to trust your Next.js frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
