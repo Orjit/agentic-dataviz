@@ -356,7 +356,8 @@ app_graph = build_graph()
 app = FastAPI(title="Agentic Data Viz API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"], # This tells your backend to trust your Next.js frontend
+    allow_origins=["http://localhost:3000",
+                   "https://agentic-frontend.onrender.com"], # This tells your backend to trust your Next.js frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -367,6 +368,10 @@ from pydantic import BaseModel
 class ChatRequest(BaseModel):
     file_path: str
     question: str
+
+@app.get("/")
+def read_root():
+    return {"status": "healthy", "message": "Agentic DataSense API is running successfully"}
 
 # --- ENDPOINT 1: File Upload ---
 @app.post("/datasets/upload")
